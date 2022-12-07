@@ -218,6 +218,7 @@ public class InnReservations {
             System.out.println(rooms.size() + 1 + ".) Room Name: " + RoomName + ", Base Price: " + basePrice);
             rooms.add(RoomName);
         }
+        System.out.println();
     }
     void ReservationChange(Statement stmt) throws SQLException {
         Scanner myObj = new Scanner(System.in);
@@ -332,6 +333,7 @@ public class InnReservations {
                     WHERE CODE = %s;
                 """.formatted(reservationCode);
         stmt.executeUpdate(sql);
+        System.out.println();
     }
     void DetailedReservationInformation(Statement stmt) throws SQLException {
         Scanner myObj = new Scanner(System.in);
@@ -551,6 +553,7 @@ public class InnReservations {
         System.out.println("  5.) Detailed Reservation Information");
         System.out.println("  6.) Revenue");
         System.out.println("  7.) Exit");
+        System.out.println();
     }
 
     void run() throws SQLException, ClassNotFoundException {
